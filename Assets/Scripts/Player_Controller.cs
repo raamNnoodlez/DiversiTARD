@@ -10,6 +10,12 @@ public class Player_Controller : MonoBehaviour
     public float gravityScale = 25f;
     public float jumpTimer = 0.4f;
 
+    public float platformOffset = 1f;
+    public float ghostPlatSpawnDelay = 0f;
+    public bool ghostPlatformExists = false;
+    //public string testString = "default";
+    public GameObject ghostPlatform;
+
     bool isJumping = false;
     bool activateJump = false;
     bool startTimer = false;
@@ -48,6 +54,11 @@ public class Player_Controller : MonoBehaviour
             {
                 earlyRelease = true;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            SpawnPlatform();
         }
     }
 
@@ -117,7 +128,7 @@ public class Player_Controller : MonoBehaviour
     //checking if grounded
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Ghost Platform"))
         {
             isJumping = false;
 
@@ -128,7 +139,7 @@ public class Player_Controller : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Platform") || collision.gameObject.CompareTag("Ghost Platform"))
         {
             isJumping = true;
 
@@ -143,5 +154,40 @@ public class Player_Controller : MonoBehaviour
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
         facingLeft = !facingLeft;
+    }
+
+    public bool CanSpawnGhostPlatform()
+    {
+        //Debug.Log("Checking");
+        //Debug.Log("Platform Status:" + ghostPlatformExists);
+        //Debug.Log("Jumping Status:" + isJumping);
+
+        if (isJumping && !ghostPlatformExists)
+        {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, platformOffset);
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.gameObject.CompareTag("Platform"))
+                    return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
+    public void SpawnPlatform()
+    {
+        if (CanSpawnGhostPlatform())
+        {
+            Invoke("SpawnDelayedPlatform", ghostPlatSpawnDelay);
+            SFX_Manager.sfxInstance.Audio.PlayOneShot(SFX_Manager.sfxInstance.platfromCreation);
+            ghostPlatformExists = true;
+        }
+    }
+
+    private void SpawnDelayedPlatform()
+    {
+        Vector3 spawnPosition = playerBody.position - new Vector2(0f, platformOffset);
+        Instantiate(ghostPlatform, spawnPosition, Quaternion.identity);
     }
 }
