@@ -6,6 +6,7 @@ public class SFX_Manager : MonoBehaviour
 {
    
     public AudioClip platfromCreation;
+    public AudioClip platformDestroy;
 
     public AudioSource Audio;
 

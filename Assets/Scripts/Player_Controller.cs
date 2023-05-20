@@ -158,10 +158,6 @@ public class Player_Controller : MonoBehaviour
 
     public bool CanSpawnGhostPlatform()
     {
-        //Debug.Log("Checking");
-        //Debug.Log("Platform Status:" + ghostPlatformExists);
-        //Debug.Log("Jumping Status:" + isJumping);
-
         if (isJumping && !ghostPlatformExists)
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, platformOffset);
