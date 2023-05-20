@@ -7,7 +7,6 @@ TagManager:
   - Platform
   - WoodenMan
   - Ghost
-  - Ghost Platform
   layers:
   - Default
   - TransparentFX
