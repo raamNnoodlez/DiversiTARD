@@ -15,7 +15,7 @@ public class ghostPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ghost = GameObject.Find("Player");
+        ghost = GameObject.Find("Ghost");
     }
 
     // Update is called once per frame
@@ -44,7 +44,7 @@ public class ghostPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ghost"))
         {
             //Debug.Log("Ghost on Platform");
             ghostOffPlatform = false;
@@ -55,7 +55,7 @@ public class ghostPlatform : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Ghost"))
         {
             //Debug.Log("Ghost off Platform");
             ghostOffPlatform = true;

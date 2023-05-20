@@ -150,10 +150,18 @@ PrefabInstance:
       propertyPath: walkSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3648501886760897568, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
+      propertyPath: ghostPlatform
+      value: 
+      objectReference: {fileID: 6849975941971926316, guid: 607304796dc15bc4386c5f3ab5c8ffd6, type: 3}
     - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 1579188758}
+    - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
+      propertyPath: ghostPlatform
+      value: 
+      objectReference: {fileID: 6849975941971926316, guid: 607304796dc15bc4386c5f3ab5c8ffd6, type: 3}
     - target: {fileID: 3648501886760897570, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -469,7 +477,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1396010965}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 20
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -589,7 +597,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -700,7 +708,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &593480068
 AudioSource:
@@ -1016,7 +1024,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 3648501887121037931}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1311589932}
-  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b20c804af022a43e39c0e579625596f4, type: 3}
@@ -1364,14 +1371,6 @@ PrefabInstance:
       propertyPath: walkSpeed
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1396010973}
-    - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3648501886760897568, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: spawnDelay
       value: 0.13
@@ -1382,7 +1381,7 @@ PrefabInstance:
       objectReference: {fileID: 6849975941971926316, guid: 607304796dc15bc4386c5f3ab5c8ffd6, type: 3}
     - target: {fileID: 3648501886760897568, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: platformOffset
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3648501886760897568, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: ghostPlatSpawnDelay
@@ -1392,6 +1391,10 @@ PrefabInstance:
       propertyPath: ghostPlatDespawnDelay
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1396010973}
     - target: {fileID: 3648501886760897569, guid: 8a01677f7b7f044c0b8dfec1f03d6624, type: 3}
       propertyPath: m_Enabled
       value: 0

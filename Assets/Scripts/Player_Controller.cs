@@ -177,7 +177,7 @@ public class Player_Controller : MonoBehaviour
 
     public void SpawnPlatform()
     {
-        if (CanSpawnGhostPlatform())
+        if (CanSpawnGhostPlatform() && CompareTag("Ghost"))
         {
             Invoke("SpawnDelayedPlatform", ghostPlatSpawnDelay);
             SFX_Manager.sfxInstance.Audio.PlayOneShot(SFX_Manager.sfxInstance.platfromCreation);
