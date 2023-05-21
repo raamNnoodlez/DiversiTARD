@@ -38,12 +38,6 @@ public class Player_Controller : MonoBehaviour
         timer = jumpTimer;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -100,6 +94,7 @@ public class Player_Controller : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
+        //Debug.Log(context.ReadValue<Vector2>());
         moveInput = context.ReadValue<Vector2>();
         IsMoving = moveInput != Vector2.zero;
 

@@ -8,6 +8,8 @@ public class Wooden_Man_Attack : MonoBehaviour
     public Animator animator;
     public float timeToAttack = 0.25f;
 
+    private bool soundAlreadyPlayed = false;
+
     float timer = 0;
     bool isAttacking = false;
     GameObject attackArea = default;
@@ -23,8 +25,15 @@ public class Wooden_Man_Attack : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if(timer >= timeToAttack)
+            if(timer >= timeToAttack - 0.2 && !soundAlreadyPlayed)
             {
+                SFX_Manager.sfxInstance.Audio.PlayOneShot(SFX_Manager.sfxInstance.axeSwing);
+                soundAlreadyPlayed = true;
+            }
+
+            if (timer >= timeToAttack)
+            {
+                soundAlreadyPlayed = false;
                 timer = 0;
                 isAttacking = false;
                 attackArea.SetActive(isAttacking);
@@ -42,6 +51,7 @@ public class Wooden_Man_Attack : MonoBehaviour
 
     public void OnAttack(InputAction.CallbackContext context)
     {
+        //Debug.Log("Attacking");
         Attack();
     }
 }

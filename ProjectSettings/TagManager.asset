@@ -8,6 +8,7 @@ TagManager:
   - WoodenMan
   - Ghost
   - Ghost Platform
+  - Map Edge
   layers:
   - Default
   - TransparentFX

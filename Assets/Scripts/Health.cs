@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
 
     public void Damage(int amount)
     {
-        if(amount < 0)
+        if (amount < 0)
         {
             throw new System.ArgumentOutOfRangeException("Cannot have negative damage");
         }

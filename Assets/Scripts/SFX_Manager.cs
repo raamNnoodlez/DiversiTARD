@@ -7,6 +7,9 @@ public class SFX_Manager : MonoBehaviour
    
     public AudioClip platfromCreation;
     public AudioClip platformDestroy;
+    public AudioClip axeSwing;
+    public AudioClip axeSwingWithHit;
+    public AudioClip environmentChange;
 
     public AudioSource Audio;
 
