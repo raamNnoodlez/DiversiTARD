@@ -1,0 +1,4 @@
+repository "18_May_Ashir@diversitard@cloud"
+  path "/"
+    smartbranch "/main/mergeBranch"        
+     
