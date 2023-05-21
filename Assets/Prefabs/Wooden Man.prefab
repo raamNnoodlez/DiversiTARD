@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 2315224286246580595}
   - component: {fileID: 9040976519144163977}
   - component: {fileID: -3388147002755191424}
-  - component: {fileID: 2617388338979928379}
   - component: {fileID: 153200468808326430}
   m_Layer: 0
   m_Name: Wooden Man
@@ -143,9 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20c804af022a43e39c0e579625596f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 25
-  jumpForce: 23
-  gravityScale: 25
+  walkSpeed: 30
+  jumpForce: 30
+  gravityScale: 40
   jumpTimer: 0.4
   platformOffset: 1
   ghostPlatSpawnDelay: 0
@@ -339,19 +338,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &2617388338979928379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6348512918910243862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 845968c39bf2a43e4a297946f800f9db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
 --- !u!114 &153200468808326430
 MonoBehaviour:
   m_ObjectHideFlags: 0

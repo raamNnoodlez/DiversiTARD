@@ -8,7 +8,7 @@ public class Wooden_Man_Attack_Area : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.GetComponent<Health>() != null)
+        if(collider.GetComponent<Health>() != null && !collider.CompareTag("Ghost"))
         {
             Health enemyHealth = collider.GetComponent<Health>();
             enemyHealth.Damage(damage);

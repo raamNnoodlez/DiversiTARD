@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.InputSystem;
 
 public class Character_Switch : MonoBehaviour
 {
@@ -22,7 +23,12 @@ public class Character_Switch : MonoBehaviour
             activeCharacter = thisCharacter.transform;
             cinemachine.LookAt = activeCharacter;
             cinemachine.Follow = activeCharacter;
+            thisCharacter.transform.position = new Vector3(thisCharacter.transform.position.x, thisCharacter.transform.position.y, -0.1f);
         }
+
+        //ignore collisions between ghost and dad
+
+        Physics2D.IgnoreCollision(thisCharacter.GetComponent<CapsuleCollider2D>(), otherCharacter.GetComponent<CapsuleCollider2D>());
     }
 
     private void Update()
@@ -38,6 +44,10 @@ public class Character_Switch : MonoBehaviour
                         thisCharacter.GetComponent<Player_Controller>().enabled = true;
                         otherCharacter.GetComponent<Player_Controller>().enabled = false;
                         activeCharacter = thisCharacter.transform;
+                        thisCharacter.transform.position = new Vector3(thisCharacter.transform.position.x, thisCharacter.transform.position.y, -0.1f);
+                        otherCharacter.transform.position = new Vector3(otherCharacter.transform.position.x, otherCharacter.transform.position.y, 0f);
+                        thisCharacter.GetComponent<PlayerInput>().enabled = true;
+                        otherCharacter.GetComponent<PlayerInput>().enabled = false;
                     }
                     else
                     {
@@ -46,6 +56,10 @@ public class Character_Switch : MonoBehaviour
                         otherCharacter.GetComponent<Player_Controller>().enabled = true;
                         thisCharacter.GetComponent<Player_Controller>().enabled = false;
                         activeCharacter = otherCharacter.transform;
+                        otherCharacter.transform.position = new Vector3(otherCharacter.transform.position.x, otherCharacter.transform.position.y, -0.1f);
+                        thisCharacter.transform.position = new Vector3(thisCharacter.transform.position.x, thisCharacter.transform.position.y, 0f);
+                        otherCharacter.GetComponent<PlayerInput>().enabled = true;
+                        thisCharacter.GetComponent<PlayerInput>().enabled = false;
                     }
                 }
                 else if (activeCharacter.CompareTag("Ghost"))
@@ -57,12 +71,20 @@ public class Character_Switch : MonoBehaviour
                         thisCharacter.GetComponent<Player_Controller>().enabled = true;
                         otherCharacter.GetComponent<Player_Controller>().enabled = false;
                         activeCharacter = thisCharacter.transform;
+                        thisCharacter.transform.position = new Vector3(thisCharacter.transform.position.x, thisCharacter.transform.position.y, -0.1f);
+                        otherCharacter.transform.position = new Vector3(otherCharacter.transform.position.x, otherCharacter.transform.position.y, 0f);
+                        thisCharacter.GetComponent<PlayerInput>().enabled = true;
+                        otherCharacter.GetComponent<PlayerInput>().enabled = false;
                     }
                     else
                     {
                         otherCharacter.GetComponent<Player_Controller>().enabled = true;
                         thisCharacter.GetComponent<Player_Controller>().enabled = false;
                         activeCharacter = otherCharacter.transform;
+                        otherCharacter.transform.position = new Vector3(otherCharacter.transform.position.x, otherCharacter.transform.position.y, -0.1f);
+                        thisCharacter.transform.position = new Vector3(thisCharacter.transform.position.x, thisCharacter.transform.position.y, 0f);
+                        otherCharacter.GetComponent<PlayerInput>().enabled = true;
+                        thisCharacter.GetComponent<PlayerInput>().enabled = false;
                     }
                 }
 

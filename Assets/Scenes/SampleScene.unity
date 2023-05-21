@@ -1083,6 +1083,18 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.size
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069236, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: jumpForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069236, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: walkSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069236, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: gravityScale
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 5786175793622069238, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1127,9 +1139,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069240, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069240, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: bca4810b663c84e3399b1a0fa16a5e1e, type: 2}
     - target: {fileID: 5786175793622069242, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 5786175793622069242, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8443918181947240805, guid: b75b1e78a66d51940b438c788f88a6e9, type: 3}
       propertyPath: cinemachine
@@ -1197,9 +1221,29 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnJump
       objectReference: {fileID: 0}
+    - target: {fileID: 6348512918910243860, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348512918910243860, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: bca4810b663c84e3399b1a0fa16a5e1e, type: 2}
+    - target: {fileID: 6348512918910243861, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Size.x
+      value: 5.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348512918910243861, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.36
+      objectReference: {fileID: 0}
     - target: {fileID: 6348512918910243862, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: m_Name
       value: Wooden Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348512918910243862, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6348512918910243864, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: animator
@@ -1208,6 +1252,10 @@ PrefabInstance:
     - target: {fileID: 6348512918910243866, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348512918910243866, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6348512918910243866, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1219,7 +1267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6348512918910243866, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6348512918910243866, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1249,6 +1297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7690010710839009779, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 9040976519144163977, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
       propertyPath: cinemachine
       value: 
@@ -1261,6 +1313,5 @@ PrefabInstance:
       propertyPath: otherCharacter
       value: 
       objectReference: {fileID: 1787352645}
-    m_RemovedComponents:
-    - {fileID: 2617388338979928379, guid: e78ccc18726335c499a82a1a6636057d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e78ccc18726335c499a82a1a6636057d, type: 3}

@@ -23,6 +23,7 @@ public class Player_Controller : MonoBehaviour
     float timer;
 
     Vector2 moveInput;
+    RaycastHit2D[] m_Contacts = new RaycastHit2D[100];
 
     public bool IsMoving { get; private set; }
 
@@ -97,7 +98,6 @@ public class Player_Controller : MonoBehaviour
         //Debug.Log(context.ReadValue<Vector2>());
         moveInput = context.ReadValue<Vector2>();
         IsMoving = moveInput != Vector2.zero;
-
     }
 
     public void OnJump(InputAction.CallbackContext context)
